@@ -33,3 +33,13 @@ sed -i 's/"网络存储"/"存储"/g' package/lean/luci-app-usb-printer/po/zh-cn/
 sed -i 's/"Web 管理"/"Web"/g' package/lean/luci-app-webadmin/po/zh-cn/webadmin.po
 sed -i 's/"管理权"/"改密码"/g' feeds/luci/modules/luci-base/po/zh-cn/base.po
 sed -i 's/"带宽监控"/"监视"/g' feeds/luci/applications/luci-app-nlbwmon/po/zh-cn/nlbwmon.po
+
+# 后台IP设置
+#export Ipv4_ipaddr="192.168.2.1"            # 修改openwrt后台地址(填0为关闭)
+#export Netmask_netm="255.255.255.0"         # IPv4 子网掩码（默认：255.255.255.0）(填0为不作修改)
+export Op_name="OpenWrt-Dalin"                # 修改主机名称为OpenWrt(填0为不作修改)
+
+
+# 个性签名,默认增加年月日[$(TZ=UTC-8 date "+%Y.%m.%d")]
+export Customized_Information="大林 $(TZ=UTC-8 date "+%Y.%m.%d")"  # 个性签名,你想写啥就写啥，(填0为不作修改)
+
