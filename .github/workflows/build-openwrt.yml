@@ -35,7 +35,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
     - name: Check server configuration
@@ -110,9 +110,21 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
-        sudo -E apt-get -qq install ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext gcc-multilib g++-multilib git gperf haveged help2man intltool libc6-dev-i386 libelf-dev libfuse-dev libglib2.0-dev libgmp3-dev libltdl-dev libmpc-dev libmpfr-dev libncurses5-dev libncursesw5-dev libpython3-dev libreadline-dev libssl-dev libtool lrzsz mkisofs msmtp ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pyelftools python3-setuptools qemu-utils rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev clang
+        sudo apt-get -qq install -y \
+            build-essential clang flex bison g++ gawk \
+            gcc-multilib g++-multilib gettext git libncurses-dev libssl-dev \
+            rsync unzip zlib1g-dev file wget libelf-dev \
+            libfuse-dev tigervnc-standalone-server tigervnc-common \
+            autoconf automake libtool autopoint device-tree-compiler \
+            antlr3 gperf swig libgmp-dev libmpc-dev libmpfr-dev \
+            libglib2.0-dev xmlto qemu-utils upx-ucl \
+            ccache curl libxml-parser-perl libusb-dev bin86 bcc sharutils \
+            b43-fwcutter findutils grep diffutils gzip bzip2 perl \
+            python3-dev python3-setuptools python3-yaml subversion git-core \
+            p7zip p7zip-full msmtp texinfo libreadline-dev \
+            fakeroot zlib1g libyaml-dev \
+            libxml2-dev libxslt-dev libyaml-libyaml-perl
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
