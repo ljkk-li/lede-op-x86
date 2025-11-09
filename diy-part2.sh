@@ -9,11 +9,28 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
+
 #移除不用软件包
 rm -rf feeds/packages/lang/golang
+rm -rf feeds/packages/lang/node
+rm -rf feeds/luci/themes/luci-theme-argon
+
 
 #添加额外软件包
-git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
+git clone https://github.com/sbwml/feeds_packages_lang_node-prebuilt -b packages-24.10 feeds/packages/lang/node 
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/lean/luci-theme-argon
+# 克隆openwrt-passwall仓库
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git
+cp -rf openwrt-passwall-packages/chinadns-ng package/chinadns-ng
+cp -rf openwrt-passwall-packages/tcping package/tcping
+cp -rf openwrt-passwall-packages/trojan-go package/trojan-go
+cp -rf openwrt-passwall-packages/trojan-plus package/trojan-plus
+cp -rf openwrt-passwall-packages/ssocks package/ssocks
+cp -rf openwrt-passwall-packages/hysteria package/hysteria
+cp -rf openwrt-passwall-packages/dns2tcp package/dns2tcp
+cp -rf openwrt-passwall-packages/sing-box package/sing-box
+#rm -rf openwrt-passwall-packages
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.99.2/g' package/base-files/files/bin/config_generate
@@ -38,6 +55,3 @@ sed -i 's/"网络存储"/"存储"/g' package/lean/luci-app-usb-printer/po/zh-cn/
 sed -i 's/"Web 管理"/"Web"/g' package/lean/luci-app-webadmin/po/zh-cn/webadmin.po
 sed -i 's/"管理权"/"改密码"/g' feeds/luci/modules/luci-base/po/zh-cn/base.po
 sed -i 's/"带宽监控"/"监视"/g' feeds/luci/applications/luci-app-nlbwmon/po/zh-cn/nlbwmon.po
-
-
-
