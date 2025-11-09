@@ -125,8 +125,8 @@ jobs:
             p7zip p7zip-full msmtp texinfo libreadline-dev \
             fakeroot zlib1g libyaml-dev \
             libxml2-dev libxslt-dev libyaml-libyaml-perl
-        sudo -E apt-get -qq autoremove --purge
-        sudo -E apt-get -qq clean
+        #sudo -E apt-get -qq autoremove --purge
+        #sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
         sudo chown $USER:$GROUPS $GITHUB_WORKSPACE
         
