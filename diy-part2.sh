@@ -18,7 +18,7 @@ rm -rf feeds/luci/themes/luci-theme-argon
 
 #添加额外软件包
 git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
-git clone https://github.com/sbwml/feeds_packages_lang_node-prebuilt -b packages-24.10 feeds/packages/lang/node 
+git clone https://github.com/sbwml/feeds_packages_lang_node-prebuilt -b packages-25.12 feeds/packages/lang/node 
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/lean/luci-theme-argon
 git clone --depth=1 https://github.com/vernesong/OpenClash.git
 cp -rf OpenClash/luci-app-openclash package/luci-app-openclash
