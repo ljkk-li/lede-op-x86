@@ -37,7 +37,7 @@ rm -rf kenzok8-packages
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.99.2/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/192.168.99.2/g' package/base-files/luci2/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.99.2/g' package/base-files/luci2/bin/config_generate
 
 #readd cpufreq for aarch64
 #sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/lean/luci-app-cpufreq/Makefile
