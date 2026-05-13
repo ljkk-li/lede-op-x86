@@ -58,7 +58,7 @@ jobs:
       
 
     - name: 检出代码
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
 
     - name: 初始化环境
       env:
