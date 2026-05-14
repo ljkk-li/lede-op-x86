@@ -14,7 +14,7 @@
 rm -rf feeds/packages/lang/golang
 rm -rf feeds/packages/lang/node
 rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-dockerman
+#rm -rf feeds/luci/applications/luci-app-dockerman
 
 
 #添加额外软件包
@@ -30,8 +30,8 @@ make && sudo make install
 popd
 #rm -rf OpenClash
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
-git clone --depth=1 https://github.com/lisaac/luci-app-dockerman.git
-cp -rf luci-app-dockerman/applications/luci-app-dockerman package/luci-app-dockerman
+#git clone --depth=1 https://github.com/lisaac/luci-app-dockerman.git
+#cp -rf luci-app-dockerman/applications/luci-app-dockerman package/luci-app-dockerman
 git clone --depth=1 https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # 克隆 kenzok8-packages 仓库
