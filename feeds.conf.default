@@ -11,6 +11,6 @@ src-git helloworld https://github.com/fw876/helloworld.git
 #src-git oldpackages http://git.openwrt.org/packages.git
 #src-link custom /usr/src/openwrt/custom-feed
 #src-git small https://github.com/kenzok8/small
-#src-git kenzok8 https://github.com/kenzok8/openwrt-packages
+src-git kenzok8 https://github.com/kenzok8/openwrt-packages
 src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main
 src-git passwall_luci https://github.com/Openwrt-Passwall/openwrt-passwall.git;main
