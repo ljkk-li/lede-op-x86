@@ -44,6 +44,7 @@ cp -rf kenzok8-packages/luci-app-eqos package/luci-app-eqos
 cp -rf kenzok8-packages/UnblockNeteaseMusic-Go package/UnblockNeteaseMusic-Go
 cp -rf kenzok8-packages/UnblockNeteaseMusic package/UnblockNeteaseMusic
 cp -rf kenzok8-packages/luci-app-unblockneteasemusic package/luci-app-unblockneteasemusic
+cp -rf kenzok8-packages/luci-app-fileassistant package/luci-app-fileassistant
 rm -rf kenzok8-packages
 
 
