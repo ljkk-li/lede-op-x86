@@ -50,7 +50,7 @@ rm -rf kenzok8-packages
 
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.99.2/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.216.2/g' package/base-files/files/bin/config_generate
 #sed -i 's/192.168.1.1/192.168.99.2/g' package/base-files/luci2/bin/config_generate
 
 #readd cpufreq for aarch64
