@@ -47,6 +47,16 @@ cp -rf kenzok8-packages/luci-app-unblockneteasemusic package/luci-app-unblocknet
 #cp -rf kenzok8-packages/luci-app-fileassistant package/luci-app-fileassistant
 rm -rf kenzok8-packages
 
+#添加istore
+git clone --depth=1 https://github.com/linkease/istore-ui.git
+cp -rf istore-ui/app-store-ui package/app-store-ui
+cp -rf istore-ui package/store-ui
+git clone --depth=1 https://github.com/linkease/istore.git
+cp -rf istore/luci/luci-app-store package/luci-app-store
+cp -rf istore package/istore
+sed -i 's/luci-lib-ipkg/luci-base/g' package/luci-app-store/Makefile
+#rm -rf istore-ui istore
+
 
 
 # Modify default IP
