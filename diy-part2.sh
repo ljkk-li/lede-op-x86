@@ -48,6 +48,9 @@ cp -rf kenzok8-packages/UnblockNeteaseMusic-Go package/UnblockNeteaseMusic-Go
 cp -rf kenzok8-packages/UnblockNeteaseMusic package/UnblockNeteaseMusic
 cp -rf kenzok8-packages/luci-app-unblockneteasemusic package/luci-app-unblockneteasemusic
 #cp -rf kenzok8-packages/luci-app-fileassistant package/luci-app-fileassistant
+cp -rf kenzok8-packages/luci-app-transmission package/luci-app-transmission
+cp -rf kenzok8-packages/transmission package/transmission
+cp -rf kenzok8-packages/transmission-web-control package/transmission-web-control
 rm -rf kenzok8-packages
 
 #添加istore
