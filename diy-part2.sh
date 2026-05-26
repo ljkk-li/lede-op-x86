@@ -14,6 +14,7 @@
 rm -rf feeds/packages/lang/golang
 rm -rf feeds/packages/lang/node
 rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-argon-config
 rm -rf feeds/packages/net/transmission
 rm -rf feeds/packages/net/transmission-web-control
 rm -rf feeds/luci/applications/luci-app-transmission
