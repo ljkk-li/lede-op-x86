@@ -14,10 +14,10 @@
 rm -rf feeds/packages/lang/golang
 rm -rf feeds/packages/lang/node
 rm -rf feeds/luci/themes/luci-theme-argon
-rm -rf feeds/luci/applications/luci-app-argon-config
-rm -rf feeds/packages/net/transmission
-rm -rf feeds/packages/net/transmission-web-control
-rm -rf feeds/luci/applications/luci-app-transmission
+#rm -rf feeds/luci/applications/luci-app-argon-config
+#rm -rf feeds/packages/net/transmission
+#rm -rf feeds/packages/net/transmission-web-control
+#rm -rf feeds/luci/applications/luci-app-transmission
 rm -rf feeds/packages/net/lucky
 rm -rf feeds/luci/applications/luci-app-lucky
 
@@ -29,7 +29,7 @@ rm -rf feeds/luci/applications/luci-app-lucky
 git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
 git clone https://github.com/sbwml/feeds_packages_lang_node-prebuilt -b packages-24.10 feeds/packages/lang/node 
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/lean/luci-theme-argon
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
+#git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git package/luci-app-argon-config
 git clone --depth=1 https://github.com/vernesong/OpenClash.git
 cp -rf OpenClash/luci-app-openclash package/luci-app-openclash
 # 编译 po2lmo (如果有po2lmo可跳过)
@@ -56,9 +56,9 @@ cp -rf kenzok8-packages/UnblockNeteaseMusic-Go package/UnblockNeteaseMusic-Go
 cp -rf kenzok8-packages/UnblockNeteaseMusic package/UnblockNeteaseMusic
 cp -rf kenzok8-packages/luci-app-unblockneteasemusic package/luci-app-unblockneteasemusic
 #cp -rf kenzok8-packages/luci-app-fileassistant package/luci-app-fileassistant
-cp -rf kenzok8-packages/luci-app-transmission package/luci-app-transmission
-cp -rf kenzok8-packages/transmission package/transmission
-cp -rf kenzok8-packages/transmission-web-control package/transmission-web-control
+#cp -rf kenzok8-packages/luci-app-transmission package/luci-app-transmission
+#cp -rf kenzok8-packages/transmission package/transmission
+#cp -rf kenzok8-packages/transmission-web-control package/transmission-web-control
 rm -rf kenzok8-packages
 
 #添加istore
