@@ -20,8 +20,6 @@ rm -rf feeds/luci/themes/luci-theme-argon
 #rm -rf feeds/luci/applications/luci-app-transmission
 rm -rf feeds/packages/net/lucky
 rm -rf feeds/luci/applications/luci-app-lucky
-
-
 #rm -rf feeds/luci/applications/luci-app-dockerman
 
 
@@ -55,7 +53,6 @@ cp -rf kenzok8-packages/luci-app-ikoolproxy package/luci-app-ikoolproxy
 cp -rf kenzok8-packages/UnblockNeteaseMusic-Go package/UnblockNeteaseMusic-Go
 cp -rf kenzok8-packages/UnblockNeteaseMusic package/UnblockNeteaseMusic
 cp -rf kenzok8-packages/luci-app-unblockneteasemusic package/luci-app-unblockneteasemusic
-#cp -rf kenzok8-packages/luci-app-fileassistant package/luci-app-fileassistant
 #cp -rf kenzok8-packages/luci-app-transmission package/luci-app-transmission
 #cp -rf kenzok8-packages/transmission package/transmission
 #cp -rf kenzok8-packages/transmission-web-control package/transmission-web-control
