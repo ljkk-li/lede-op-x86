@@ -39,9 +39,9 @@ git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome.git packag
 #git clone --depth=1 https://github.com/lisaac/luci-app-dockerman.git
 #cp -rf luci-app-dockerman/applications/luci-app-dockerman package/luci-app-dockerman
 git clone --depth=1 https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
-git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git lucky-repo
-cp -rf lucky-repo/luci-app-lucky package/luci-app-lucky
-cp -rf lucky-repo/lucky package/lucky
+git clone --depth=1 https://github.com/sirpdboy/luci-app-lucky.git package/lucky
+#cp -rf lucky-repo/luci-app-lucky package/luci-app-lucky
+#cp -rf lucky-repo/lucky package/lucky
 
 # 克隆 kenzok8-packages 仓库
 git clone --depth=1 https://github.com/kenzok8/small-package.git kenzok8-packages
