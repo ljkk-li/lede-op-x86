@@ -81,10 +81,5 @@ sed -i 's/192.168.1.1/192.168.216.2/g' package/base-files/files/bin/config_gener
 ./scripts/feeds update -a
 ./scripts/feeds install -a -f
 
-# 修复 dockerd 29.x 变量为空导致的 cp 报错问题
-if [ -f "feeds/packages/utils/dockerd/Makefile" ]; then
-    echo "Applying dockerd compilation fix..."
-    sed -i 's/cp \$(NESTED_EXECUTABLES)/[ -z "$(NESTED_EXECUTABLES)" ] || cp $(NESTED_EXECUTABLES)/g' feeds/packages/utils/dockerd/Makefile
-fi
 
 
